@@ -22,7 +22,7 @@
             label = "MO1_MO2_MO3";
             #binding-cells = <0>;
             bindings = <&mo LOWER>, <&mo RAISE>, <&mo ADJUST>;
-            mods = <(MOD_LCTL|MOD_LALT)>, <(MOD_LSFT)>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_LSFT)>;
         };
     };
 
