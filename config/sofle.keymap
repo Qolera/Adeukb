@@ -17,9 +17,9 @@
 
 / {
     behaviors {
-        mo1_mo2_mo3: mo1_mo2_mo3 {
+        mo_multi: mo_multi {
             compatible = "zmk,behavior-mod-morph";
-            label = "MO1_MO2_MO3";
+            label = "MO_MULTI";
             #binding-cells = <0>;
             bindings = <&mo LOWER>, <&mo RAISE>, <&mo ADJUST>;
             mods = <(MOD_LCTL|MOD_LALT|MOD_LSFT)>;
