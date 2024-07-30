@@ -37,7 +37,7 @@
 // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   \   |
 // |  ESC  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
 // |   `   |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  | PLAY  |  N   |  M    |  ,    |  .   |   /   |  RGUI |
-//               | ALT | MAY  | DEL  | BSPC |  ENTER |  | SPACE | Rshif|  mo1  | RALT  | mo2  |
+//               | CTR | ALT  | SHF  | DEL  |  BSPC  |  | ENTER | SPACE| Rshif | RALT  | mo1  |
             bindings = <
 &kp EQUAL  &kp N1    &kp N2     &kp N3      &kp N4    &kp N5                                &kp N6    &kp N7    &kp N8    &kp N9  &kp N0   &kp MINUS
 &kp TAB    &kp Q     &kp W      &kp E       &kp R     &kp T                                 &kp Y     &kp U     &kp I     &kp O   &kp P    &kp BSLH
@@ -54,15 +54,15 @@
 // TODO: Some binds are waiting for shifted keycode support.
 // ------------------------------------------------------------------------------------------------------------
 // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
-// |       |     | up  |      | RGB  |modRGB|                   |      |  1    |  2    |  3   |  PGUP |  PGDN |
-// |       |  L  | dn  |  R   | hue- | hue+ |                   |      |  4    |  5    |  6   |  HOME |  END  |
-// |       |     |     | Bri- | Bri+ | PWR  |        |  |       |      |  7    |  8    |  9   |       |       |
-//               |     |      | DEL  | BSPC |  ENTER |  | SPACE |      |       |  0    |      |
+// | LGUI  |     | up  |      | RGB  |modRGB|                   |      |  1    |  2    |  3   |  PGUP |  PGDN |
+// | ESC   |  L  | dn  |  R   | hue- | hue+ |                   |      |  4    |  5    |  6   |  HOME |  END  |
+// | PSCRN |     |     |      | Bri- | Bri+ |        |  |       |      |  7    |  8    |  9   |       |       |
+//               | mo2 | alt  | SHF  | DEL  |  BSPC  |  | ENTER | SPACE|       |  0    |      |
             bindings = <
 &kp F1     &kp F2     &kp F3     &kp F4             &kp F5              &kp F6                                             &kp F7     &kp F8    &kp F9    &kp F10   &kp F11    &kp F12
 &kp LGUI   &trans     &kp UP     &trans             &rgb_ug RGB_TOG     &rgb_ug RGB_EFF                                    &trans     &kp N1    &kp N2    &kp N3    &kp PG_UP  &kp PG_DN
 &kp ESC    &kp LEFT   &kp DOWN   &kp RIGHT          &rgb_ug RGB_HUD     &rgb_ug RGB_HUI                                    &trans     &kp N4    &kp N5    &kp N6    &kp HOME   &kp END
-&kp PSCRN  &trans     &trans     &rgb_ug RGB_BRD    &rgb_ug RGB_BRI     &ext_power EP_TOG     &trans            &trans     &trans     &kp N7    &kp N8    &kp N9    &trans     &trans
+&kp PSCRN  &trans     &trans     &trans             &rgb_ug RGB_BRD     &rgb_ug RGB_BRI       &trans            &trans     &trans     &kp N7    &kp N8    &kp N9    &trans     &trans
                       &mo 2      &kp LALT           &kp LSHFT           &kp DEL               &kp BSPC          &kp ENTER  &kp SPACE  &trans    &kp N0    &trans    
             >;
 
@@ -91,14 +91,14 @@
         adjust_layer {
 // ----------------------------------------------------------------------------------------------------------------------------
 // | BTCLR  |  BT1    |  BT2    |   BT3   |   BT4   |   BT5   |                  |      |      |       |      |       |       |
-// | EXTPWR | RGB_HUD | RGB_HUI | RGB_SAD | RGB_SAI | RGB_EFF |                  |      |      |       |      |       |       |
+// |        | RGB_HUD | RGB_HUI | RGB_SAD | RGB_SAI | RGB_EFF |                  |      |      |       |      |       |       |
 // |        | RGB_BRD | RGB_BRI |         |         |         |                  |      |      |       |      |       |       |
 // |        |         |         |         |         |         | RGB_TOG | |      |      |      |       |      |       |       |
 //                    |         |         |         |         |         | |      |      |      |       |      |
             display-name = "adjust";
             bindings = <
 &bt BT_CLR        &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                            &none &none &none &none &none &none
-&ext_power EP_TOG &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_SAD &rgb_ug RGB_SAI &rgb_ug RGB_EFF                         &none &none &none &none &none &none
+&trans            &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_SAD &rgb_ug RGB_SAI &rgb_ug RGB_EFF                         &none &none &none &none &none &none
 &none             &rgb_ug RGB_BRD &rgb_ug RGB_BRI &none           &none           &none                                   &none &none &none &none &none &none
 &none             &none           &none           &none           &none           &none            &rgb_ug RGB_TOG &none  &none &none &none &none &none &none
                                   &none           &none           &none           &none            &none           &none  &none &none &none &none
