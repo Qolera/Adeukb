@@ -25,7 +25,7 @@
     reg = <0>; /* ignored, but necessary for SPI bindings */
     spi-max-frequency = <4000000>;
     /* WS2812 */
-    chain-length = <29>; /* number of LEDs */
+    chain-length = <35>; /* número de LEDs actualizado a 35 según documentación */
     spi-one-frame = <0x70>;
     spi-zero-frame = <0x40>;
     color-mapping = <LED_COLOR_ID_GREEN
@@ -33,7 +33,6 @@
                           LED_COLOR_ID_BLUE>;
   };
 };
-
 / {
     chosen {
         zmk,underglow = &led_strip;
