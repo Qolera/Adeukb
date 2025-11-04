@@ -72,7 +72,7 @@
                     &kp LGUI &kp LALT &kp LCTRL &mo 1  &kp SPACE    &kp ENTER  &mo 2  &kp RALT  &kp RCTRL &kp RGUI
     >;
 
-    sensor-bindings = <&inc_dec_kp PG_UP PG_DN &fast_pg_encoder>;
+    sensor-bindings = <&inc_dec_kp PG_DN PG_UP &fast_pg_encoder>;
 };
 
         lower_layer {
@@ -92,7 +92,7 @@
                       &mo 2      &kp LALT           &kp LSHFT           &kp DEL               &kp BSPC          &kp ENTER  &kp SPACE  &trans    &kp N0    &trans    
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &fast_pg_encoder>;
+            sensor-bindings = <&inc_dec_kp PG_DN PG_UP &fast_pg_encoder>;
         };
 
         raise_layer {
@@ -111,7 +111,7 @@
                         &trans       &trans       &trans       &trans        &trans  &trans  &trans    &trans    &trans   &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &fast_pg_encoder>;
+            sensor-bindings = <&inc_dec_kp PG_DN PG_UP &fast_pg_encoder>;
         };
 
         adjust_layer {
