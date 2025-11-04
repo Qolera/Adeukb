@@ -15,7 +15,7 @@
         // Fast page scrolling encoder behavior - sends 20 page commands per rotation
         fast_pg_encoder: fast_pg_encoder {
             compatible = "zmk,behavior-sensor-rotate";
-            #binding-cells = <2>;
+            #sensor-binding-cells = <2>;
             bindings = <&fast_pg_up>, <&fast_pg_dn>;
         };
 
